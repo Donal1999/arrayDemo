@@ -1,24 +1,52 @@
 package ie.atu.week4;
 
+import java.util.Scanner;
+import java.util.ArrayList;
+
 public class arraydemo {
     public static void main(String[] args) {
-        int[] myNumbers = new int[10];
-        myNumbers[0] = 100;
-        myNumbers[1] = 200;
-        myNumbers[2] = 300;
-        myNumbers[3] = 400;
-        myNumbers[4] = 500;
-        myNumbers[5] = 600;
-        myNumbers[6] = 700;
-        myNumbers[7] = 800;
-        myNumbers[8] = 900;
-        myNumbers[9] = 1000;
+        Scanner index10  = new Scanner(System.in);
+        ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+        myNumbers.add(100);
+        myNumbers.add(200);
+        myNumbers.add(300);
+        myNumbers.add(400);
+        myNumbers.add(500);
+        myNumbers.add(600);
+        myNumbers.add(700);
+        myNumbers.add(800);
+        myNumbers.add(900);
+        myNumbers.add(1000);
 
-        for(int i = 0; i < myNumbers.length; i++){
+        for(int i = 0; i < myNumbers.size(); i++) {
+            System.out.printf("index %d : %d \n", i, myNumbers.get(i) );// printf instead of println
+        }
+
+        System.out.println("enter a new number" );// prompt user for new number
+        int scan = index10.nextInt();
+        myNumbers.add(scan);// adds the users input to array list
+
+        for(int i = 0; i < myNumbers.size(); i++) {
+            System.out.printf("index %d : %d \n", i, myNumbers.get(i) );// printf instead of println
+        }
+
+
+
+
+        // when using set arrays
+        /*for(int i = 0; i < myNumbers.length; i++){
 
             System.out.printf("index %d : %d \n" ,i, myNumbers[i]);// printf instead of println
 
         }
+        System.out.println("enter a number");
+        int number = index10.nextInt();
+        myNumbers[10]=number;
+        for(int i = 0; i < myNumbers.length; i++){
+
+            System.out.printf("index %d : %d \n" ,i, myNumbers[i]);// printf instead of println
+
+        }*/
     }
 
 }
